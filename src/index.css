@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  .font-display {
+    font-family: 'Jua', 'Noto Sans KR', sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbars for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}

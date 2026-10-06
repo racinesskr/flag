@@ -1,0 +1,6 @@
+{
+  "name": "세계 국기 맞히기 퀴즈",
+  "description": "전 세계 197개국의 국기 그림을 보고 국가명을 맞히는 5지선다 모바일 퀴즈 게임입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
