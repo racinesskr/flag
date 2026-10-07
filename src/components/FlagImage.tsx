@@ -19,14 +19,12 @@ export const FlagImage: React.FC<FlagImageProps> = ({
     setSourceIndex(0);
   }, [code]);
 
-  // Primary: PNG w640 (guaranteed explicit pixel dimensions so flexbox never collapses width to 0)
-  // Secondary: SVG vector fallback
+  // Bundled SVG assets work without an internet connection.
   const sources = [
-    `https://flagcdn.com/w640/${code}.png`,
-    `https://flagcdn.com/${code}.svg`,
+    `${import.meta.env.BASE_URL}flags/${code}.svg`,
   ];
 
-  // If both external image sources fail, render high-contrast emoji flag fallback
+  // If the bundled image cannot load, render the emoji fallback.
   if (sourceIndex >= sources.length) {
     const emojiSize =
       size === 'lg' ? 'text-6xl' : size === 'md' ? 'text-3xl' : 'text-xl';
@@ -85,3 +83,4 @@ export const FlagImage: React.FC<FlagImageProps> = ({
     </div>
   );
 };
+
